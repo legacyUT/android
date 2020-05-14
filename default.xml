@@ -2,8 +2,7 @@
 <manifest>
 
   <remote name="phablet"
-	fetch="http://github.com/ubports-android"
-	review="http://review.ubports.com"
+	fetch="http://github.com/legacyUT"
 	revision="refs/tags/android-5.1.1_r5" />
 
   <remote  name="aosp"
