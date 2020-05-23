@@ -41,3 +41,32 @@ lunch aosp_hammerhead-userdebug
 time make clobber
 time make -j 32
 ```
+
+## Install the new image
+
+Begin with the boot and recovery images found in ```out/target/product/hammerhead```. Boot your device into fastboot mode and run the following commands:
+
+```
+fastboot flash boot boot.img
+fastboot flash recovery recovery.img
+```
+
+Reboot to validate new kernel
+
+```
+uname -a
+lsb_release -a
+cat /proc/version
+```
+
+Then fastboot again and proceed to install your new build of the system image. A helper script is available (see ```replace-android-system.sh```)
+
+```
+./replace-android-system.sh system.img
+```
+
+Once you reboot into UT, you can validate the updated build properties...
+
+```
+cat /android/system/build.prop
+```
