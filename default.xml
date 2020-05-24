@@ -15,17 +15,6 @@
       review="http://review.ubports.com"
       revision="refs/heads/ubp-5.1" />
 
-  <remote name="ab2ut"
-	fetch="http://github.com/ab2ut"
-	revision="refs/heads/ubp-5.1" />
-
-  <remote name="them"
-	fetch="http://github.com/TheMuppets"
-	revision="refs/heads/cm-12.1" />
-
-  <remote name="peat-psuwit"
-	fetch="http://github.com/peat-psuwit" />
-
   <default remote="phablet"
 	sync-j="6" />
 
@@ -203,7 +192,7 @@
 
   <project path="bootable/recovery" name="ubports/android_bootable_recovery" groups="pdk" remote="ubp" />
 
-  <project path="vendor/sony/system/timekeep" name="timekeep" remote="peat-psuwit" revision="ubuntu-touch" />
+  <project path="vendor/sony/system/timekeep" name="timekeep" revision="ubuntu-touch" />
 
   <!-- Ubuntu specific repos -->
 
@@ -223,5 +212,5 @@
   <!-- UBports devices : limited to hammerhead (Nexus 5). For complete list see https://github.com/ubports/device-builds -->
   <project path="device/lge/hammerhead" name="ubports/android_device_lge_hammerhead" remote="ubp" />
   <project path="kernel/lge/hammerhead" name="ubports/android_kernel_lge_hammerhead" remote="ubp" />
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="ab2ut"/>
+  <project path="vendor/lge" name="proprietary_vendor_lge" revision="refs/heads/ubp-5.1" />
 </manifest>
