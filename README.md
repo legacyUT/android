@@ -32,7 +32,9 @@ repo sync -j 10 -c --force-sync
 
 ## Build the source
 
-With the sources downloaded, we need to set up our environment and build the images.
+With the sources downloaded, we need to set up our environment and build the debug images.
+
+(As of May/2020, release images fail during build)
 
 ```
 export USE_CCACHE=1
